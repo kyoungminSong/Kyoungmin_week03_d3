@@ -1,3 +1,25 @@
 svg {
-  border: 1px blue solid;
+  border: 1px rgb(160, 160, 160) solid;
+  background-color: white;
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+body {
+  background-color: rgb(230, 230, 230);
+  font-style: italic;
+}
+
+#price {
+  position: relative;
+  left: 325px;
+  top: 60px;
+  text-transform: uppercase;
+}
+
+#quantity {
+  position: relative;
+  top: 310px;
+  left: 10px;
+  text-transform: uppercase;
 }

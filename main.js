@@ -4,7 +4,8 @@ const svg = d3
   .select("body")
   .append("svg")
   .attr("width", 500)
-  .attr("height", 500);
+  .attr("height", 500)
+  .attr("opacity", 0.7);
 
 const data = [
   {
@@ -49,14 +50,15 @@ const data = [
   },
 ];
 
-const circles = svg
-  .selectAll("circle")
+const rect = svg
+  .selectAll("rect")
   .data(data)
   .enter()
-  .append("circle")
-  .attr("cx", (d) => d.price)
-  .attr("cy", (d) => 100)
-  .attr("r", (d) => d.quantity * 0.5)
-  .attr("fill", "blue")
-  .attr("stroke", "black")
-  .attr("stroke-width", 3);
+  .append("rect")
+  .attr("x", (d) => d.details.price * 150)
+  .attr("y", 30)
+  .attr("width", 25)
+  .attr("height", (d) => d.quantity * 4)
+  .attr("fill", (d) => d.details.color)
+  .attr("stroke", "white")
+  .attr("stroke-width", 1);
